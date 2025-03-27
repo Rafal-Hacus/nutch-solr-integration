@@ -1,7 +1,6 @@
-version: '3.3'
 services:
   solr:
-    image: "solr:7.3.1"
+    image: "solr:latest"
     ports:
      - "8983:8983"
     # volumes:
@@ -11,7 +10,7 @@ services:
       - solr-precreate
       - mycore
   nutch:
-    image: "apache/nutch:release-1.15"
+    image: "apache/nutch:latest"
     links:
       - solr
     environment: 
